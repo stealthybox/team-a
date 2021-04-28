@@ -4,6 +4,9 @@ metadata:
   name: podinfo
   namespace: team-a
 spec:
+  # We don't use type LoadBalancer intentionally
+  # because it creates a NodePort and the platform
+  # team maintains a production Ingress for us
   type: ClusterIP
   selector:
     app: podinfo
